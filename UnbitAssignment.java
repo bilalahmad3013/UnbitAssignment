@@ -1,17 +1,13 @@
 public class basicProblems {
-	
- 
-   
+  
 	 public static void helper(int ind, int[] arr, int target, List <List<Integer>> ans, List <Integer> check) {
 	        if (target == 0) {
 	            ans.add(new ArrayList < > (check));
 	            return;
 	        }
-
 	        for (int i = ind; i < arr.length; i++) {
 	            if (i > ind && arr[i] == arr[i - 1]) continue;
 	            if (arr[i] > target) break;
-
 	            check.add(arr[i]);
 	            helper(i + 1, arr, target-arr[i],ans,check);
 	            check.remove(check.size()-1);
@@ -22,9 +18,7 @@ public class basicProblems {
 	        Arrays.sort(arr);
 	        helper(0, arr, k, ans, new ArrayList < > ());
 	        return ans;
-	    }
-
-   
+	    }   
   
 	public static ArrayList<ArrayList<Integer>> getPair(int arr[],int k){
 		Arrays.sort(arr);
@@ -60,12 +54,12 @@ public class basicProblems {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Please enter the length of the array");
-        int n=sc.nextInt();
+                    int n=sc.nextInt();
         
         // Creating the array.
         
-        int arr[]=new int[n];
-        for(int i=0;i<arr.length;i++) {
+                int arr[]=new int[n];
+                for(int i=0;i<arr.length;i++) {
         	int b=i+1;
         	
         	//Taking Input
